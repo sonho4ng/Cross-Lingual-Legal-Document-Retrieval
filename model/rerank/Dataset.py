@@ -22,7 +22,7 @@ rerank_df = rerank_df.sample(frac=1.0, random_state=42).reset_index(drop=True)
 
 # Lưu
 rerank_df.to_csv("rerank_train.csv", index=False)
-print("✅ Saved rerank_train.csv with shape:", rerank_df.shape)
+print("Saved rerank_train.csv with shape:", rerank_df.shape)
 
 
 class RerankDataset(Dataset):

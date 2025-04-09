@@ -9,13 +9,13 @@ def rerank_with_cross_encoder(question, contexts, model_path, model_name="vinai/
     if device is None:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # Load model & tokenizer
+
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
     model = AutoModelForSequenceClassification.from_pretrained(model_path).to(device).eval()
 
-    # ✅ Làm sạch context: loại None, cắt dài
+
     contexts = [c if isinstance(c, str) else "" for c in contexts]
-    contexts = [c[:2048] for c in contexts]  # ngăn tokenizer tạo >512 tokens
+    contexts = [c[:2048] for c in contexts]
 
     try:
         inputs = tokenizer(
@@ -27,8 +27,8 @@ def rerank_with_cross_encoder(question, contexts, model_path, model_name="vinai/
             return_tensors="pt"
         ).to(device)
     except Exception as e:
-        print("❌ Tokenizer error:", e)
-        print("👉 Context length:", [len(c) for c in contexts])
+        print("Tokenizer error:", e)
+        print("Context length:", [len(c) for c in contexts])
         raise
 
     with torch.no_grad():
