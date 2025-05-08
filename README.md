@@ -1,6 +1,6 @@
 ---
 # Cross Lingual Legal Document Retrieval 
-###(VIETNAMESE - ENGLISH)
+### (VIETNAMESE - ENGLISH)
 
 ### Supervised by Prof. Ngo Van Linh
 
