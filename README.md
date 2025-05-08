@@ -1,5 +1,5 @@
 ---
-# RAG for Legal Document Retrieval
+# Cross Lingual Legal Document Retrieval (VIETNAMESE - ENGLISH)
 
 ### Supervised by Prof. Ngo Van Linh
 
