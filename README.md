@@ -7,9 +7,8 @@ This project aims to develop a cross-lingual Retrieval-Augmented Generation (RAG
 
 ## Overview
 
-The dataset used in this project is composed of two main sources:
+Dataset:
 - Manually crawled legal texts from public government websites and legal portals.
-- Private datasets provided by a partner company, which contain curated and labeled legal documents.
 
 
 ---
